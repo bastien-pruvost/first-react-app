@@ -1,6 +1,6 @@
 import { plantList } from '../data/plantList.js';
 
-const Categories = ({ selectedCategory, updateSelectedCategory }) => {
+const Categories = ({ setSelectedCategory }) => {
   const categoriesArray = plantList.reduce(
     (acc, plant) =>
       acc.includes(plant.category) ? acc : acc.concat(plant.category),
@@ -8,11 +8,9 @@ const Categories = ({ selectedCategory, updateSelectedCategory }) => {
   );
 
   const updateCategory = (category) => {
-    if (category === 'all') {
-      updateSelectedCategory(['classique', 'extérieur', 'plante grasse']);
-    } else {
-      updateSelectedCategory([category]);
-    }
+    if (category === 'all')
+      setSelectedCategory(['classique', 'extérieur', 'plante grasse']);
+    else setSelectedCategory([category]);
   };
 
   return (

@@ -1,11 +1,11 @@
+import { useState } from 'react';
 import { plantList } from '../data/plantList';
 import Categories from './Categories';
 import PlantItem from './PlantItem';
 import '../styles/ShoppingList.css';
-import { useState } from 'react';
 
 const ShoppingList = ({ cart, updateCart }) => {
-  const [selectedCategory, updateSelectedCategory] = useState([
+  const [selectedCategory, setSelectedCategory] = useState([
     'classique',
     'extérieur',
     'plante grasse'
@@ -28,10 +28,7 @@ const ShoppingList = ({ cart, updateCart }) => {
 
   return (
     <div className='lmj-shopping-list'>
-      <Categories
-        selectedCategory={selectedCategory}
-        updateSelectedCategory={updateSelectedCategory}
-      />
+      <Categories setSelectedCategory={setSelectedCategory} />
       <ul className='lmj-plant-list'>
         {plantList
           .filter((plant) => selectedCategory.includes(plant.category))
