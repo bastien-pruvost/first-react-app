@@ -5,7 +5,8 @@
 .lmj-plant-list {
   list-style-type: none;
   padding: 32px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 32px;
   justify-content: center;
+  grid-template-columns: repeat(auto-fill, 250px);
 }
