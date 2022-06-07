@@ -1,36 +1,54 @@
-import '../styles/ShoppingList.css';
 import { plantList } from '../data/plantList';
+import Categories from './Categories';
 import PlantItem from './PlantItem';
+import '../styles/ShoppingList.css';
+import { useState } from 'react';
 
-function ShoppingList() {
-  const categories = plantList.reduce(
-    (acc, plant) =>
-      acc.includes(plant.category) ? acc : acc.concat(plant.category),
-    []
-  );
+const ShoppingList = ({ cart, updateCart }) => {
+  const [selectedCategory, updateSelectedCategory] = useState([
+    'classique',
+    'extérieur',
+    'plante grasse'
+  ]);
+
+  const addToCart = (name, price) => {
+    const currentPlantAdded = cart.find((plant) => plant.name === name);
+    if (currentPlantAdded) {
+      const cartFilteredCurrentPlant = cart.filter(
+        (plant) => plant.name !== name
+      );
+      updateCart([
+        ...cartFilteredCurrentPlant,
+        { name, price, amout: currentPlantAdded.amount + 1 }
+      ]);
+    } else {
+      updateCart([...cart, { name, price, amount: 1 }]);
+    }
+  };
 
   return (
     <div className='lmj-shopping-list'>
-      <ul>
-        {categories.map((category) => (
-          <li key={category}>{category}</li>
-        ))}
-      </ul>
-
+      <Categories
+        selectedCategory={selectedCategory}
+        updateSelectedCategory={updateSelectedCategory}
+      />
       <ul className='lmj-plant-list'>
-        {plantList.map(({ id, cover, name, water, light }) => (
-          <PlantItem
-            key={id}
-            id={id}
-            name={name}
-            cover={cover}
-            light={light}
-            water={water}
-          />
-        ))}
+        {plantList
+          .filter((plant) => selectedCategory.includes(plant.category))
+          .map(({ id, cover, name, water, light, price }) => (
+            <div key={id}>
+              <PlantItem
+                name={name}
+                cover={cover}
+                light={light}
+                water={water}
+              />
+              <button onClick={() => addToCart(name, price)}>Ajouter</button>
+            </div>
+          ))}
       </ul>
     </div>
   );
-}
+};
 
 export default ShoppingList;
