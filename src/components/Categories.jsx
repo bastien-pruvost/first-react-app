@@ -1,4 +1,5 @@
 import { plantList } from 'data/plantList.js';
+import 'styles/Categories.css';
 
 const Categories = ({ setSelectedCategory }) => {
   const categoriesArray = plantList.reduce(
@@ -14,14 +15,19 @@ const Categories = ({ setSelectedCategory }) => {
   };
 
   return (
-    <select onChange={(event) => updateCategory(event.target.value)}>
-      <option value='all'>Toutes</option>
-      {categoriesArray.map((category) => (
-        <option key={category} value={category}>
-          {category}
-        </option>
-      ))}
-    </select>
+    <div className='lmj-categories'>
+      <select
+        className='lmj-categories-select'
+        onChange={(event) => updateCategory(event.target.value)}
+      >
+        <option value='all'>Toutes</option>
+        {categoriesArray.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 

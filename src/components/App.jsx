@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from 'assets/logo.png';
 import Banner from 'components/Banner';
 import Cart from 'components/Cart';
@@ -7,7 +7,12 @@ import Footer from 'components/Footer';
 import 'styles/Layout.css';
 
 const App = () => {
-  const [cart, updateCart] = useState([]);
+  const localStorageCart = JSON.parse(localStorage.getItem('cart'));
+  const [cart, updateCart] = useState(localStorageCart ? localStorageCart : []);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <div>
