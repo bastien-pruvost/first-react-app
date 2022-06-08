@@ -1,5 +1,5 @@
 import CareScale from './CareScale';
-import '../styles/PlantItem.css';
+import 'styles/PlantItem.css';
 
 const PlantItem = ({ id, cover, name, water, light }) => {
   return (

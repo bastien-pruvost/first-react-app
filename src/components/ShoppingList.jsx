@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { plantList } from '../data/plantList';
-import Categories from './Categories';
-import PlantItem from './PlantItem';
-import '../styles/ShoppingList.css';
+import { plantList } from 'data/plantList';
+import Categories from 'components/Categories';
+import PlantItem from 'components/PlantItem';
+import 'styles/ShoppingList.css';
 
 const ShoppingList = ({ cart, updateCart }) => {
   const [selectedCategory, setSelectedCategory] = useState([
@@ -19,7 +19,7 @@ const ShoppingList = ({ cart, updateCart }) => {
       );
       updateCart([
         ...cartFilteredCurrentPlant,
-        { name, price, amout: currentPlantAdded.amount + 1 }
+        { name, price, amount: currentPlantAdded.amount + 1 }
       ]);
     } else {
       updateCart([...cart, { name, price, amount: 1 }]);

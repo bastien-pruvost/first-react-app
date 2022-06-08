@@ -1,5 +1,5 @@
-import Sun from '../assets/sun.svg';
-import Water from '../assets/water.svg';
+import Sun from 'assets/sun.svg';
+import Water from 'assets/water.svg';
 
 function CareScale({ careValue, careType }) {
   const range = [1, 2, 3];

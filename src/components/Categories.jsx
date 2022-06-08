@@ -1,4 +1,4 @@
-import { plantList } from '../data/plantList.js';
+import { plantList } from 'data/plantList.js';
 
 const Categories = ({ setSelectedCategory }) => {
   const categoriesArray = plantList.reduce(

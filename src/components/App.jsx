@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Banner from './Banner';
-import logo from '../assets/logo.png';
-import Cart from './Cart';
-import ShoppingList from './ShoppingList';
-import Footer from './Footer';
-import '../styles/Layout.css';
+import logo from 'assets/logo.png';
+import Banner from 'components/Banner';
+import Cart from 'components/Cart';
+import ShoppingList from 'components/ShoppingList';
+import Footer from 'components/Footer';
+import 'styles/Layout.css';
 
 const App = () => {
   const [cart, updateCart] = useState([]);

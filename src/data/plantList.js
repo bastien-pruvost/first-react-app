@@ -35,7 +35,6 @@ export const plantList = [
     light: 1,
     water: 2,
     cover: pothos,
-
     price: 9
   },
   {
@@ -45,7 +44,6 @@ export const plantList = [
     light: 2,
     water: 3,
     cover: calathea,
-
     price: 20
   },
   {
