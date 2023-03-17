@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+<!-- prettier-ignore-start -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- Rename all occurences with Cmd + D :
 
-## Available Scripts
+My First React App
+first-react-app
+www.projectlink.com
+https://www.projectlink.com
+https://www.documentationlink.com
 
-In the project directory, you can run:
+ -->
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# My First React App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The first react app I created.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## About the project
 
-### `npm run build`
+This is a page where you have a list of plants that you can filter by category, and you can add items to the cart.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Display a list of products
+- Filter products on the page by category
+- Add a product to the cart (useState sync with localStorage)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Javascript
+- React
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Run locally
 
-## Learn More
+1. Clone the project:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  git clone https://github.com/bastien-pruvost/first-react-app.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Go to the project directory:
 
-### Code Splitting
+```bash
+  cd first-react-app
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Install dependencies:
 
-### Analyzing the Bundle Size
+```bash
+  pnpm install
+  # or
+  yarn install
+  # or
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. Run the development server:
 
-### Making a Progressive Web App
+```bash
+  pnpm start
+  # or
+  yarn start
+  # or
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Build project
 
-### Deployment
+To build the project for production usage, run the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+  pnpm build
+  # or
+  yarn build
+  # or
+  npm run build
+```
 
-### `npm run build` fails to minify
+It will create a `build` folder in root directory with all static files.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Start project in production
+
+To start the app in production, you need to serve the build created in `build` folder. 
+
+
+## Report bug / Support
+
+To report a bug or get help [open an issue](https://github.com/bastien-pruvost/first-react-app/issues).
+
+
+## Suggestions
+
+If you have any suggestion, feel free to [open an issue](https://github.com/bastien-pruvost/first-react-app/issues) with the tag "enhancement"
+
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create.
+
+Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and open a pull request.
+
+1. [Fork the project](https://github.com/bastien-pruvost/first-react-app/fork)
+2. Create your feature branch (`git checkout -b feature/my-feature`)
+3. Code your feature
+4. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+5. Push to the branch (`git push origin feature/my-feature`)
+6. [Open a pull request](https://github.com/bastien-pruvost/first-react-app/compare)
+
+You can also simply [open an issue](https://github.com/bastien-pruvost/first-react-app/issues) with the tag "enhancement".
+
+Don't forget to give the project a star! Thanks again!
+
+
+## License
+
+Distributed under the [MIT License](https://choosealicense.com/licenses/mit/).
+
+See `LICENSE` file for more information.
+
+
+
+<!-- prettier-ignore-end -->
