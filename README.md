@@ -10,7 +10,6 @@ https://www.documentationlink.com
 
  -->
 
-
 # My First React App
 
 The first react app I created.
